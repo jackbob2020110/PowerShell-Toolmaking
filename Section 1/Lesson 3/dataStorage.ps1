@@ -20,3 +20,7 @@ $myHashtable['Version'] ## Calling a Version key
 $myHashtable.Add('Number', 8) ## Adding another key value pair to an existing hash table
 
 Get-Process | Select-Object ProcessName,@{Name="NPM+PM";Expression={$_.NPM + $_.PM}} ## Using hashtables to format the data on screen
+
+$demoHT = @{'key1'="hello"; 'key2'="world"}
+$demoHT['key1']
+$demoHT['key2']

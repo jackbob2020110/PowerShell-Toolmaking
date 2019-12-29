@@ -10,3 +10,11 @@ $myObj2 | Add-Member -NotePropertyName "Number2" -NotePropertyValue 6 ## one mor
 Add-Member -InputObject $myObj2 ScriptMethod AddNumbers { ## Here we add a method to an object
     return($this.Number + $this.Number2) ## It will simply return a sum of Number and Number2 properties
 } -Force -PassThru
+
+
+$myObj3 = New-Object -TypeName psobject
+$myObj3 | Add-Member -NotePropertyName "Name" -NotePropertyValue "Jack"
+$myObj3 | Add-Member -NotePropertyName "Email" -NotePropertyValue "dir@idr.com"
+$myObj3 | Add-Member -NotePropertyName "Depart" -NotePropertyValue "HR"
+
+$myObj3
